@@ -1,0 +1,14 @@
+{
+    "name": "fe-game-store",
+    "version": "1.0.0",
+    "description": "A basic Electron app",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "Douglas Mendes",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^26.6.10"
+    }
+}
