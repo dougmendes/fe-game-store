@@ -3,10 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Electron App</title>
+  <title>Steam-like Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .menu-bar {
+      display: flex;
+      background-color: #1b2838;
+      color: white;
+      padding: 10px;
+      user-select: none;
+    }
+    .menu-item {
+      margin-right: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+    .menu-item:hover {
+      color: #66c0f4;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #1b2838;
+      border: 1px solid #66c0f4;
+      top: 35px;
+      left: 0;
+      z-index: 1000;
+    }
+    .submenu-item {
+      padding: 10px 20px;
+      color: white;
+      cursor: pointer;
+    }
+    .submenu-item:hover {
+      background-color: #66c0f4;
+      color: #1b2838;
+    }
+    .menu-item:hover .submenu {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Electron App</h1>
-  <p>This is a basic Electron application.</p>
+  <div class="menu-bar">
+    <div class="menu-item">
+      Steam
+      <div class="submenu">
+        <div class="submenu-item">Settings</div>
+        <div class="submenu-item">Exit</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      Library
+      <div class="submenu">
+        <div class="submenu-item">Games</div>
+        <div class="submenu-item">Software</div>
+        <div class="submenu-item">Music</div>
+        <div class="submenu-item">Tools</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      Store
+      <div class="submenu">
+        <div class="submenu-item">Featured</div>
+        <div class="submenu-item">Top Sellers</div>
+        <div class="submenu-item">New Releases</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      Friends
+      <div class="submenu">
+        <div class="submenu-item">View Friends List</div>
+        <div class="submenu-item">Chat</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      Help
+      <div class="submenu">
+        <div class="submenu-item">Support</div>
+        <div class="submenu-item">System Information</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
